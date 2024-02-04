@@ -19,6 +19,7 @@ public class Methods {
         int num2 = object.nextInt();
         System.out.println("enter the operator: ");
         char oper = object.next().charAt(0);
+        object.close();
 
         Arithmetic operation = new Arithmetic();
 

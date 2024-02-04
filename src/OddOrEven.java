@@ -7,6 +7,7 @@ public class OddOrEven {
         Scanner input = new Scanner(System.in);
 
         int num = input.nextInt();
+        input.close();
 
         if (!(num % 2 == 0)) {
             System.out.println("entered number is odd");
