@@ -7,6 +7,7 @@ public class Input {
 
         int num1 = input.nextInt();
         int num2 = input.nextInt();
+        input.close();
         // int num3 = input.nextInt();
         // int num4 = input.nextInt();
         // int num5 = input.nextInt();

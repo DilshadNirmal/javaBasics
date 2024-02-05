@@ -4,7 +4,7 @@ public class Palindrome {
         String input = "madam";
         String reverse = "";
 
-        for (int index = 0; index < input.length(); index++) {
+        for (int index = input.length() - 1; index >= 0; index++) {
             reverse = reverse + input.charAt(index);
         }
 
