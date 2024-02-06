@@ -13,5 +13,8 @@ public class PatternPrint {
         
         System.out.println("diamond pattern");
         PatternFunc.diamondPattern(name);
+        
+        System.out.println("star pattern");
+        
     }
 }

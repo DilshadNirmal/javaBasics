@@ -61,4 +61,6 @@ public class PatternFunc {
             System.out.println("enter a odd numbered text to print diagonal");
         }
     }
+
+    
 }
