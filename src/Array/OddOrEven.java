@@ -5,30 +5,23 @@ import java.util.ArrayList;
 public class OddOrEven {
     public static void main(String[] args) {
         int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 4, 8};
-        ArrayList<Integer>[] result = numberFind(numbers);
-        ArrayList<Integer>[] duplicate = duplicate(numbers);
+        ArrayList<ArrayList<Integer>> result = numberFind(numbers);
+        ArrayList<ArrayList<Integer>> duplicate = duplicate(numbers);
 
-        System.out.println("Odd numbers:");
-        for (int number : result[0]) {
-            System.out.print(number + " ");
-        }
-
-        System.out.println();
-
-        System.out.println("Even numbers:");
-        for (int number : result[1]) {
+        System.out.println("Odd numbers && Even numbers:");
+        for (ArrayList<Integer> number : result) {
             System.out.print(number + " ");
         }
 
         System.out.println();
 
         System.out.println("Duplicate numbers:");
-        for (int number : duplicate[0]) {
+        for (ArrayList<Integer> number : duplicate) {
             System.out.print(number + " ");
         }
     }
 
-    public static ArrayList<Integer>[] numberFind(int[] arr) {
+    public static ArrayList<ArrayList<Integer>> numberFind(int[] arr) {
         ArrayList<Integer> evenNumbers = new ArrayList<>();
         ArrayList<Integer> oddNumbers = new ArrayList<>();
 
@@ -40,14 +33,13 @@ public class OddOrEven {
             }
         }
 
-        @SuppressWarnings("unchecked")
-        ArrayList<Integer>[] result = new ArrayList[2];
-        result[0] = oddNumbers;
-        result[1] = evenNumbers;
+        ArrayList<ArrayList<Integer>> result = new ArrayList<>();
+        result.add(oddNumbers);
+        result.add(evenNumbers);
         return result;
     }
 
-    public static ArrayList<Integer>[] duplicate(int[] arr) {
+    public static ArrayList<ArrayList<Integer>> duplicate(int[] arr) {
 
         ArrayList<Integer> duplicate = new ArrayList<>();
 
@@ -59,9 +51,8 @@ public class OddOrEven {
             }
         }
 
-        @SuppressWarnings("unchecked")
-        ArrayList<Integer>[] duplicates = new ArrayList[1];
-        duplicates[0] = duplicate;
+        ArrayList<ArrayList<Integer>> duplicates = new ArrayList<>();
+        duplicates.add(duplicate);
 
         return duplicates;
     }
