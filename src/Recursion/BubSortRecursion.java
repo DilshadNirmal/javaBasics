@@ -3,21 +3,23 @@ package Recursion;
 public class BubSortRecursion {
     public static void main(String[] args) {
         int[] array = {5, 3, 2, 6, 1, 0, 4};
+        int[] array1 = {5, 3, 2, 6, 1, 0, 4};
 
-        int[] ascending = asc(array, 0, 0);
+        int[] ascending = asc(array1, 0, 0);
         int[] descending = des(array, 0, 0);
-
-        System.out.println("Ascending order");
-        for (int index = 0; index < array.length; index++) {
-            System.out.print(ascending[index] + " ");
-        }
-
-        System.out.println();
         
         System.out.println("Descending order");
         for (int index = 0; index < array.length; index++) {
             System.out.print(descending[index] + " ");
         }
+        
+        System.out.println();
+        
+        System.out.println("Ascending order");
+        for (int index = 0; index < array.length; index++) {
+            System.out.print(ascending[index] + " ");
+        }
+        
     }
 
     public static int[] asc(int[] arr, int i, int j) {
