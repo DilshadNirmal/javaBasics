@@ -1,7 +1,5 @@
 package OOPS.Inheritance.Single;
 
-import OOPS.Inheritance.Multilevel.Father;
-
 public class Son extends Father {
 
     int age;
