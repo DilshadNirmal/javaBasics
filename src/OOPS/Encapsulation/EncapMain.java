@@ -1,6 +1,10 @@
 package OOPS.Encapsulation;
 
 public class EncapMain {
+
+    /**
+     * Encapsulation - hiding the values or hiding the data
+     */
     public static void main(String[] args) {
         
         Person person = new Person("dilshad", "nirmal");
