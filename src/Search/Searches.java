@@ -4,10 +4,11 @@ public class Searches {
 
     public static void main(String[] args) {
         int[] array = {3, 5, 6, 7, 8, 9};
-        int find = 7;
+        int find = 9;
 
         print("linear", linearSearch(array, find), find);        
-        print("binary", binarySearch(array, find), find);        
+        print("binary", binarySearch(array, find), find);    
+        print("binary in Recursive", binaryRecursive(array, find, 0, array.length - 1), find);    
 
         
     }
@@ -49,6 +50,21 @@ public class Searches {
         }
 
         return -1;
+    }
+
+    public static int binaryRecursive(int[] array, int find, int left, int right) {
+        int middle = (left + right) / 2;
+        int res;
+
+        if (find == array[middle]) {
+            return middle;
+        } else if (find > array[middle]) {
+            res = binaryRecursive(array, find, middle + 1, right);
+        } else {
+            res = binaryRecursive(array, find, left, middle - 1);
+        }
+
+        return res;
     }
 
 }
