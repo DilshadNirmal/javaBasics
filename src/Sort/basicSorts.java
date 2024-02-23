@@ -23,8 +23,4 @@ public class basicSorts {
 
         return array;
     }
-
-    public static int[] selectionSort(int[] array) {
-        
-    }
 }

@@ -14,7 +14,6 @@ public class Laptop extends Processor {
 
     @Override
     String processorName() {
-        // TODO Auto-generated method stub
         return processor;
     }
 }
