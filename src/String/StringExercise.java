@@ -4,6 +4,10 @@ public class StringExercise {
     public static void main(String[] args) {
         String anyString = "hello world";
 
+        String replace = anyString.replace("world", "all");
+
+        System.out.println("after replace: " + replace);
+
         try {
             int c = 0/0;
             System.out.println(c);
