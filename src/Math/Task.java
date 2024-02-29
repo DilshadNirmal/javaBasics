@@ -10,6 +10,7 @@ public class Task {
         print("------------");
         
         simplestFormRatio(80, 75);
+        simplestFormRatio(3200, 2560);
         print("------------");
 
         print("negative to positive: " + Math.abs(negNum));
