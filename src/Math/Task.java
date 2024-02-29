@@ -9,7 +9,7 @@ public class Task {
         findPrimeNumber(arr);
         print("------------");
         
-        simplestFormRatio(32, 16);
+        simplestFormRatio(80, 75);
         print("------------");
 
         print("negative to positive: " + Math.abs(negNum));
@@ -54,10 +54,8 @@ public class Task {
 
     public static void simplestFormRatio(Integer ante, Integer cons) {
         Integer gcf = findGcf(ante, cons);
-        
-        Integer num1 = ante / gcf, num2 = cons / gcf;
 
-        print("Simplest form for given ratio is " + num1 + ":" + num2);
+        print("Simplest form for given ratio is using gcf " + gcf + " => " + Math.divideExact(ante, gcf) + ":" + Math.divideExact(cons, gcf));
     }
 
     public static int findGcf(int x, int y) {
