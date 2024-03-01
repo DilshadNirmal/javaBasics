@@ -2,7 +2,7 @@ package ArrayList;
 
 import java.util.ArrayList;
 
-public class OddOrEven {
+public class OddOrEven<T> {
     public ArrayList<ArrayList<Integer>> FindOdrEv(ArrayList<Integer> arr) {
         ArrayList<Integer> oddArr = new ArrayList<>();
         ArrayList<Integer> evenArr = new ArrayList<>();
@@ -32,9 +32,9 @@ public class OddOrEven {
         return EvenArr;
     }
 
-    ArrayList<Integer> array;
+    ArrayList<T> array;
 
-    public OddOrEven(ArrayList<Integer> arr) {
+    public OddOrEven(ArrayList<T> arr) {
         array = arr;
     }
 
@@ -68,7 +68,7 @@ public class OddOrEven {
         return false;
     }
 
-    public void print(ArrayList<Integer> arr) {
+    public void print(ArrayList<T> arr) {
         for (int i = 0; i < arr.size(); i++) {
             System.out.println(arr.get(i));
         }

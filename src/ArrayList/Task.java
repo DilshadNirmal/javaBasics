@@ -12,7 +12,7 @@ public class Task {
         arr.add(5);
         arr.add(6);
 
-        OddOrEven find = new OddOrEven(arr);
+        OddOrEven<Integer> find = new OddOrEven<Integer>(arr);
 
         ArrayList<ArrayList<Integer>> resultArr =  find.FindOdrEv(arr);
         ArrayList<Integer> oddArr =  find.returnOdd(resultArr);
