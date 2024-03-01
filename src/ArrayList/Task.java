@@ -12,7 +12,7 @@ public class Task {
         arr.add(5);
         arr.add(6);
 
-        OddOrEven find = new OddOrEven();
+        OddOrEven find = new OddOrEven(arr);
 
         ArrayList<ArrayList<Integer>> resultArr =  find.FindOdrEv(arr);
         ArrayList<Integer> oddArr =  find.returnOdd(resultArr);
@@ -36,5 +36,13 @@ public class Task {
         for (Integer i : oddArr) {
             System.out.print(i + " ");
         }
+
+        System.out.println();
+
+        System.out.println("from re-useable function");
+        System.out.println("odd numbers");
+        find.print(find.oddArray());
+        System.out.println("even numbers");
+        find.print(find.evenArray());
     }
 }
