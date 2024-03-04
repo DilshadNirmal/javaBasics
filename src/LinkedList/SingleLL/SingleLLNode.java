@@ -1,4 +1,4 @@
-package LinkedList;
+package LinkedList.SingleLL;
 
 public class SingleLLNode {
     private int value;
