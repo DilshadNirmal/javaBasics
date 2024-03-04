@@ -21,7 +21,7 @@ public class SingleLL {
         SingleLLNode currentVal = head;
 
         if (head != null) {
-            while(currentVal.getNext() == null) {
+            while(currentVal != null) {
                 System.out.println(currentVal.getValue());
                 currentVal = currentVal.getNext();
             }
