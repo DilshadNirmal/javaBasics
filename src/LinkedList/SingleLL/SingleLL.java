@@ -50,21 +50,30 @@ public class SingleLL {
     public void remove(int position) {
 
         SingleLLNode newNode = new SingleLLNode();
-        int index = 1;
-        SingleLLNode currentItem = head;
 
-        while (currentItem != null) {
-            if (position == index) {
-                newNode.setNext(currentItem.getNext());
-                currentItem.setNext(head);
-                break;
+        if (head == null && position == 0) {
+            head = newNode;
+            tail = newNode;
+        } else if (position == 0) {
+            newNode.setNext(head);
+            head = newNode;
+        } else {
+            int index = 1;
+            SingleLLNode currentItem = head;
+
+            while (currentItem != null) {
+                if (position == index) {
+                    newNode.setNext(currentItem.getNext());
+                    currentItem.setNext(newNode);
+                    break;
+                }
+                currentItem = currentItem.getNext();
+                index++;
             }
-            currentItem = currentItem.getNext();
-            index++;
-        }
 
-        if (index < position) {
-            System.out.println("index out of bound error");
+            if (index < position) {
+                System.out.println("index out of bound error");
+            }
         }
     }
 

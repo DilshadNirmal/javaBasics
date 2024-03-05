@@ -51,17 +51,18 @@ public class OddOrEven<T> {
 
         for (int i = 0; i < array.size(); i++) {
             if (oddOrEven(array.get(i)) && isOdd) {
-                res.add(array.get(i));
+                res.add((int)array.get(i));
             } else if (isOdd == false && !oddOrEven(array.get(i))) {
-                res.add(array.get(i));
+                res.add((int)array.get(i));
             }
         }
 
         return res;
     }
 
-    public boolean oddOrEven(Integer val) {
-        if (val % 2 != 0) {
+    public boolean oddOrEven(T t) {
+
+        if ((int)t % 2 != 0) {
             return true;
         }
 

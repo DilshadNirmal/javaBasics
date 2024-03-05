@@ -8,6 +8,7 @@ public class Sum {
         this.b = b;
     }
 
+    @SuppressWarnings("unused")
     private Integer add() {
         return a + b;
     }

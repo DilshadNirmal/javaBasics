@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class MathExample {
     public static void main(String[] args) {
-        Integer a = -23, b = 12;
+        Integer a = -23;
         Double c = 21.7, d = 11.2;
 
         print("Abs: " + Math.abs(a));

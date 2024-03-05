@@ -10,7 +10,7 @@ public class Box {
 		int mid=n/2;
 		for(int row=0;row<n;row++) {
 			for(int col=0;col<n;col++) {
-				int up=mid+col;
+				// int up=mid+col;
 				if(row==0&&col<=mid||col==mid||row==mid||col==0&&row<=mid||
 						row==n-1&&col>=mid&&row>=mid||col==n-1&&row>=mid||
 						row+col==mid||mid>=col&&row+col==mid||

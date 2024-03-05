@@ -2,6 +2,8 @@ package String;
 
 public class StringCondition {  
     public static void main(String[] args) {
+
+        @SuppressWarnings("unused")
         String firstName = "gojo", lastName = "satoru", extra = null, specialExtra = "honoured one";
 
         // equals
@@ -12,11 +14,11 @@ public class StringCondition {
         }
 
         // contains
-        if (firstName != null && extra != null && firstName.contains(extra)) {
-            System.out.println(firstName + " contains " + extra);
-        } else {
-            System.out.println(firstName + " not contains " + extra);
-        }
+        // if (firstName != null && extra != null && firstName.contains(extra)) {
+        //     System.out.println(firstName + " contains " + extra);
+        // } else {
+        //     System.out.println(firstName + " not contains " + extra);
+        // }
 
         // equalsIgnoreCase
         if (firstName.equalsIgnoreCase(specialExtra)) {
