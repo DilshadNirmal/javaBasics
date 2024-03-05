@@ -14,4 +14,25 @@ public class LinkedPerson {
             tail = newPerson;
         }
     }
+
+    public void remove(int position) {
+        Person currentPerson = head;
+
+        int index = 0;
+        while (currentPerson != null) {
+            if (index == position) {
+                currentPerson.nextPerson = currentPerson;
+            }
+            currentPerson = currentPerson.nextPerson;
+        }
+    }
+
+    public void print() {
+        Person currentPerson = head;
+
+        while (currentPerson != null) {
+            System.out.println(currentPerson.name);
+            currentPerson = currentPerson.nextPerson;
+        }
+    }
 }
