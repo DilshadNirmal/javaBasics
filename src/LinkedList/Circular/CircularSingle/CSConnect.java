@@ -29,4 +29,17 @@ public class CSConnect {
             System.out.println("list is empty");
         }
     }
+
+    public void recursivePrint(CSPerson current) {
+        if (current != null) {
+            System.out.println(current.name);
+            current = current.next;
+
+            if (current != head) {
+                recursivePrint(current);
+            }
+        } else {
+            System.out.println("list is empty");
+        }
+    }
 }

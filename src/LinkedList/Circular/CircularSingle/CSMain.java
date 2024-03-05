@@ -9,5 +9,7 @@ public class CSMain {
         connection.insert("otherOtherone");
 
         connection.print();
+
+        connection.recursivePrint(connection.head);
     }
 }
