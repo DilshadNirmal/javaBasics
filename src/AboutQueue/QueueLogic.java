@@ -8,8 +8,8 @@ public class QueueLogic<Q> {
         return count;
     }
 
-    public void enqueue() {
-        QueueNode<Q> newQueue = new QueueNode<Q>();
+    public void enqueue(Q data) {
+        QueueNode<Q> newQueue = new QueueNode<Q>(data);
 
         if (head == null) {
             head = newQueue;
