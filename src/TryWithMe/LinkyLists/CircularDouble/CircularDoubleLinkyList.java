@@ -13,8 +13,10 @@ public class CircularDoubleLinkyList {
         list.display();
 
         list.deleteAtPos(3);
-
+        list.insertAtPos(0, 2);
+        list.insertAtPos(1, 2);
         list.display();
+        System.out.println(list.getSize());
 
     }
 }
