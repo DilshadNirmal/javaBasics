@@ -17,7 +17,6 @@ public class DlLinkedPerson {
     }
 
     public void insert(String name, int position) {
-        DLPerson newPerson = new DLPerson(name);
 
         if (position == 0) {
             insert(name);
