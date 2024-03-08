@@ -21,11 +21,11 @@ public class DoubleCircularLL {
 	public void print() {
 		DLLCircularPerson currentPerson=head;
 		if(currentPerson!=null) {
-		do {
-			System.out.println(currentPerson.name);
-			currentPerson=currentPerson.connectNext;
+			do {
+				System.out.println(currentPerson.name);
+				currentPerson=currentPerson.connectNext;
+			}
+			while(currentPerson!=head);
 		}
-		while(currentPerson!=head);
-	}
 	}
 }

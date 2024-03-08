@@ -16,5 +16,15 @@ public class ActualQueue {
         System.out.println("-----------");
         rationQueue.display();
 
+        rationQueue.dequeue();
+        
+        System.out.println("-----------");
+        rationQueue.display();
+
+        rationQueue.dequeue();
+        
+        System.out.println("-----------");
+        rationQueue.display();
+
     }
 }
