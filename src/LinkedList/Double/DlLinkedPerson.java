@@ -1,10 +1,10 @@
 package LinkedList.Double;
 
-public class DlLinkedPerson {
-    DLPerson head, tail;
+public class DlLinkedPerson<K> {
+    DLPerson<K> head, tail;
 
-    public void insert(String name) {
-        DLPerson newPerson = new DLPerson(name);
+    public void insert(K name) {
+        DLPerson<K> newPerson = new DLPerson<K>(name);
 
         if (head == null) {
             head = newPerson;
@@ -16,14 +16,14 @@ public class DlLinkedPerson {
         }
     }
 
-    public void insert(String name, int position) {
+    public void insert(K name, int position) {
 
         if (position == 0) {
             insert(name);
         } else {
             int index = 0;
 
-            DLPerson currentDlPerson = head;
+            DLPerson<K> currentDlPerson = head;
 
             while (currentDlPerson != null) {
 
@@ -38,19 +38,19 @@ public class DlLinkedPerson {
     }
 
     public void printAsc() {
-        DLPerson currentPerson = head;
+        DLPerson<K> currentPerson = head;
 
         while (currentPerson != null) {
-            System.out.println(currentPerson.name);
+            System.out.println(currentPerson.data);
             currentPerson = currentPerson.nextPerson;
         }
     }
 
     public void printDes() {
-        DLPerson currentPerson = tail;
+        DLPerson<K> currentPerson = tail;
 
         while (currentPerson != null) {
-            System.out.println(currentPerson.name);
+            System.out.println(currentPerson.data);
             currentPerson = currentPerson.prevPerson;
         }
     }
