@@ -1,8 +1,0 @@
-{
-    "employees" : [
-        {"employee id": 0, "name": "gokul", "age": 34, "gender": "M", "contact": "386763266"},
-        {"employee id": 1, "name": "gowtham", "age": 65, "gender": "M", "contact": "386763266"},
-        {"employee id": 2, "name": "vignesh", "age": 453, "gender": "M", "contact": "386763266"},
-        {"employee id": 3, "name": "vignesh gymboy", "age": 32, "gender": "M", "contact": "386763266"}
-    ]
-}

@@ -1,0 +1,31 @@
+{
+    "form" : {
+        "fieldType" : {
+            "input" : {
+                "firstName" : "",
+                "lastName" : "",
+                "DOB": "",
+                "address" : "",
+                "pincode" : "",
+                "phone" : ""
+            },
+            "dropDown" : {
+                "educationalQualification" : {
+                    "bachelorate" : "",
+                    "12" : "",
+                    "10" : ""
+                },
+                "city" : "",
+                "state" : "",
+                "country" : ""
+            },
+            "radio" : {
+                "gender" : "",
+                "bloodGroup" :  ""
+            },
+            "checkbox" : {
+                
+            }
+        }
+    }
+}
