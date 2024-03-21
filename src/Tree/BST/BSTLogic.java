@@ -38,13 +38,11 @@ public class BSTLogic {
             return true;
         }
     }
-
     private BSTNode find(BSTNode currentNode, int value) {
 
         if (currentNode == null) {
             return null;
         }
-
         if (currentNode.value == value) {
             return currentNode;
         } else if (currentNode.value > value) {
@@ -56,12 +54,46 @@ public class BSTLogic {
         }
     }
 
-    public void printTree(BSTNode root, String prefix, boolean isLeft) {
-		if (root != null) {
-			System.out.println(prefix + (isLeft ? "├── " : "└── ") + root.value);
-			printTree(root.left, prefix + (isLeft ? "│   " : "    "), true);
-			printTree(root.right, prefix + (isLeft ? "│   " : "    "), false);
-		}
-	}
+    public BSTNode delete(int value) {
+        root = delete(root, value);
+        return root;
+    }
+
+    private BSTNode delete(BSTNode currentRoot, int value) {
+        if (currentRoot == null)
+            return null;
+
+        // Search for the node to be deleted
+        if (value < currentRoot.value)
+            currentRoot.left = delete(currentRoot.left, value);
+        else if (value > currentRoot.value)
+            currentRoot.right = delete(currentRoot.right, value);
+        else {
+            // Node to be deleted found
+
+            // Case 1: No child or only one child
+            if (currentRoot.left == null)
+                return currentRoot.right;
+            else if (currentRoot.right == null)
+                return currentRoot.left;
+
+            // Case 2: Node with two children
+            // Find the inorder successor (smallest node in the right subtree)
+            currentRoot.value = minValue(currentRoot.right);
+
+            // Delete the inorder successor
+            currentRoot.right = delete(currentRoot.right, currentRoot.value);
+        }
+        return currentRoot;
+    }
+
+    private int minValue(BSTNode node) {
+        int minValue = node.value;
+        while (node.left != null) {
+            minValue = node.left.value;
+            node = node.left;
+        }
+        return minValue;
+    }
     
 }

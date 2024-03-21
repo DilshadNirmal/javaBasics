@@ -1,5 +1,6 @@
 package Tree.BST;
 
+
 public class BSTMain {
     public static void main(String[] args) {
 
@@ -19,6 +20,10 @@ public class BSTMain {
         logic.find(3);
         logic.find(7);
 
-        // logic.printTree(node, "", false);
+        System.out.println("------- delete -----");
+        logic.delete(10);
+
+        logic.find(10);
+
     }
 }
