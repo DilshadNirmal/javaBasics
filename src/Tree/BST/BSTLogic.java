@@ -63,25 +63,18 @@ public class BSTLogic {
         if (currentRoot == null)
             return null;
 
-        // Search for the node to be deleted
         if (value < currentRoot.value)
             currentRoot.left = delete(currentRoot.left, value);
         else if (value > currentRoot.value)
             currentRoot.right = delete(currentRoot.right, value);
         else {
-            // Node to be deleted found
-
-            // Case 1: No child or only one child
             if (currentRoot.left == null)
                 return currentRoot.right;
             else if (currentRoot.right == null)
                 return currentRoot.left;
 
-            // Case 2: Node with two children
-            // Find the inorder successor (smallest node in the right subtree)
             currentRoot.value = minValue(currentRoot.right);
 
-            // Delete the inorder successor
             currentRoot.right = delete(currentRoot.right, currentRoot.value);
         }
         return currentRoot;
