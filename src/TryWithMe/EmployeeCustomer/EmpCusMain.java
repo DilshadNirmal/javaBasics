@@ -24,7 +24,7 @@ public class EmpCusMain {
 
         SortOut sortOut = new SortOut();
 
-        sortOut.dataSheet(customerOne.getName(), customerOne.getCusId(), customerOne.getPurchase(), 4);
+        sortOut.dataSheet(customerOne.getName(), customerOne.getCusId(), customerOne.getPurchase(), 3);
         sortOut.dataSheet(employeeOne.getName(), employeeOne.getEmpId(), employeeOne.getSalary(), 4);
 
     }

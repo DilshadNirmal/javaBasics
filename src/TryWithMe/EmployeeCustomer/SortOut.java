@@ -6,7 +6,7 @@ public class SortOut {
 
     public void dataSheet(String name, String id, Map<String, String> newMap, int value) {
 
-        System.out.println("Name: " + name + " - Customer Id: " + id);
+        System.out.println("Name: " + name + " - Id: " + id);
         getMap(newMap, value);
     }
 
